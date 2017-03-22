@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@mipmap/background"
+
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="48dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/beat_left_ib"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="32dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/left"/>
+
+        <TextView
+            android:id="@+id/beat_tempo_tv"
+            android:layout_width="90dp"
+            android:gravity="center"
+
+            android:layout_height="50dp"
+            android:layout_marginRight="32dp"
+
+            android:text="4/4"
+            android:textSize="43sp"
+            android:textColor="#45c1ff"/>
+
+        <ImageButton
+            android:id="@+id/beat_right_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/right"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/beat_less_ib"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/less"/>
+
+        <EditText
+            android:id="@+id/beat_bpm_et"
+            android:layout_width="70dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:cursorVisible="false"
+            android:maxLength="3"
+            android:layout_marginRight="30dp"
+            android:text="120"
+            android:background="@null"
+            android:textSize="25sp"
+            android:inputType="number"
+            android:textColor="#ffffff"/>
+
+        <ImageButton
+            android:id="@+id/beat_plus_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/plus"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+        <com.cainwong.metronome.RotateControlView
+            android:id="@+id/rotate"
+            android:layout_width="250dp"
+            android:layout_centerInParent="true"
+            android:layout_height="250dp" />
+        <ImageButton
+            android:id="@+id/beat_start_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/_button_bg"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/play_icon"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/_switch"/>
+        <TextView
+            android:id="@+id/beat_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:gravity="center"
+            android:layout_marginRight="30dp"
+            android:text="切换音色"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+
+
+</LinearLayout>
